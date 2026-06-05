@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import { Fraunces, Geist_Mono, Plus_Jakarta_Sans } from "next/font/google";
 import { AppProviders } from "@/components/providers/AppProviders";
-import { APP_DESCRIPTION, APP_NAME } from "@/lib/constants";
+import { rootMetadata } from "@/lib/seo";
 import "./globals.css";
 
 const plusJakarta = Plus_Jakarta_Sans({
@@ -23,12 +23,19 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
+  ...rootMetadata,
   title: {
-    default: `${APP_NAME} - Insurance operations dashboard`,
-    template: `%s - ${APP_NAME}`,
+    default: typeof rootMetadata.title === "string" ? rootMetadata.title : "InsureOps",
+    template: "%s — InsureOps",
   },
-  description: APP_DESCRIPTION,
-  applicationName: APP_NAME,
+  category: "technology",
+  creator: "Philemon Eniola",
+  authors: [{ name: "Philemon Eniola", url: "https://dev-philemon.vercel.app" }],
+  formatDetection: {
+    email: false,
+    address: false,
+    telephone: false,
+  },
 };
 
 export default function RootLayout({
