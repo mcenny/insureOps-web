@@ -46,7 +46,7 @@ export function LandingPage() {
                 size="sm"
                 className="text-white/80 hover:bg-white/10 hover:text-white"
               >
-                <a href="https://github.com/mcenny/insureops-dashboard" target="_blank" rel="noreferrer">
+                <a href="https://github.com/mcenny/insureOps-web" target="_blank" rel="noreferrer">
                   GitHub
                 </a>
               </Button>
