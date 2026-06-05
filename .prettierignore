@@ -1,0 +1,8 @@
+.next
+node_modules
+yarn.lock
+public
+coverage
+test-results
+playwright-report
+.env*
